@@ -8,6 +8,8 @@ app.get('/', (req, res) => {
   res.json({ message: "Welcome from FEATURE branch" });
 });
 
+// CI test change
+console.log("Testing CI with a Pull Request"); 
 
 app.use('/tasks', tasksRouter);
 

@@ -8,6 +8,13 @@ app.get('/', (req, res) => {
   res.json({ message: "Welcome from FEATURE branch" });
 });
 
+// CI test change
+console.log("Testing CI with a Pull Request"); 
+
+if (require.main === module) {
+ app.listen(3000, () => console.log("API running on port 3000"));
+}
+module.exports = app; 
 
 app.use('/tasks', tasksRouter);
 
